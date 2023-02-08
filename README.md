@@ -1,5 +1,5 @@
-# ucsc-cse-30
-Programming Abstractions: Python
+# CSE30
+Programming Abstractions: Python w/ Kishore Pusukuri
 
 # Syllabus
 
