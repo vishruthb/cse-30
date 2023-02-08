@@ -1,7 +1,8 @@
 # ucsc-cse-30
 Programming Abstractions: Python
 
-Syllabus:
+# Syllabus
+
 Part-A: Mastering the Basics
 - Introduction
 - Basic Data Types & Basic Data Structures
