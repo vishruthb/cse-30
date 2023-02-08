@@ -1,5 +1,5 @@
 # CSE30
-Programming Abstractions: Python w/ Kishore Pusukuri
+Programming Abstractions: Python w/ Professor Kishore Pusukuri.
 
 # Syllabus
 
