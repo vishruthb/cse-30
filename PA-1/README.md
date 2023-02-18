@@ -6,18 +6,24 @@ A 2-dimensional grid (or nested list) of 0s and 1s sorted in non-increasing  (de
 
 Function Signature
 def num_of_zeros(grid: list) -> int:
+
 Examples
+
 Input	
-grid
-[[1,1,1,0],[1,1,1,0],[1,1,0,0],[0,0,0,0]]
-Output		
+
+grid: [[1,1,1,0],[1,1,1,0],[1,1,0,0],[0,0,0,0]]
+
+Output	
+
 8
  
 
 Input	
-grid
-[[1, 1],[1, 1]]
+
+grid: [[1, 1],[1, 1]]
+
 Output		
+
 0
  
 
@@ -27,21 +33,33 @@ Write a function that takes two lists as input and returns a list of common elem
 Function Signature
 def common_elements(list_1: list, list_2: list) -> list:
 Examples
+
 Input	
+
 list_1
 [ 2, 5, 4, 1]
+
 list_2
+
 [ 5, 3, 6, 2, 4, 10, 11, 15, 9]
+
 Output		
+
 [ 2, 4, 5 ]
  
 
 Input	
+
 list_1
+
 [ 8, 3, 8, 7, 3]
+
 list_2
+
 [ 3, 8, 4]
+
 Output		
+
 [3,8]
  
 
