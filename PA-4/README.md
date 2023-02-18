@@ -6,50 +6,32 @@
 This problem is about single-linked lists. You are given the heads of two sorted linked lists:  linked_list_1 and linked_list_2, containing only integer values and ending with None. Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list. You must solve this problem using recursion.
 
 * Examples
-** Example 1
+
+Example 1:
 linked_list_1: 1 -> 3 -> 5 -> None
 linked_list_2: 2 -> 4 -> 6 -> None
 output: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> None
-* Example 2
+
+Example 2
 linked_list_1: None
 linked_list_2: None
 output: None
-* Example 3
+
+Example 3
 linked_list_1: 5 -> None
 linked_list_2: 2 -> 4 -> 6 -> None
 output: 2 -> 4 -> 5 -> 6 -> None
 
-Please patiently read through and follow the instructions below and the instructions in the template file; otherwise, any violation of these instructions may result in 0 points in this problem
-You should use the provided template python file to begin your work
-the template file can be found in File -> ProgrammingAssignment-4 -> merge_two_lists.py
-alternatively, you may use the colab notebook version, under the File -> ProgrammingAssignment-4 -> Colab Notebook Version directory. But, after you finish your work, please download the notebook as a python file (NOT a notebook file)
-on the menu bar (Colab's menu bar, NOT your browser's menu bar), go to File -> Download -> Download .py
-you are expected to download the template file from Canvas, follow the instructions in that file, work directly in that file, and turn the entire python file in
- Notes:
-You may assume:
-all numbers in both linked lists are integers and unique
-Use the ListNode found in the template code to construct linked lists
-Do not use any other class to construct/store linked lists
-You must use recursion to solve the problem
-The function `merge_two_lists` itself must be a recursive function
-Recursive function (programming), a function which references itself - source: wikipediaLinks to an external site.
-If you didn't use recursion, or  `merge_two_lists` is not a recursive function, no points will be given
-EXTERNAL LIBRARIES SHOULD NOT BE USED
-Point Allocation (6 points):
-6 points for passing all the test cases
-Documentation is necessary ( you should always document your code, even if it's not required! )
-Submission Instructions:
-A single python (.py) file named “merge_two_lists.py”
-Please read this announcement and this announcement carefully before submitting your assignment
-Do a double-check right before submitting the code, to ensure your code is free from syntax errors and aligns with ALL given instructions
- 
+** EXTERNAL LIBRARIES SHOULD NOT BE USED **
 
-Problem-B - Recursion on Nested Dictionary
-Problem Statement:
+
+## Problem-B - Recursion on Nested Dictionary
+
+###Problem Statement:
 Write a recursive function that will return the sum of all the integer numbers in a dictionary which may contain more dictionaries nested in it. You must solve this problem using recursion.
 
-Examples
-Example 1
+* Examples
+* Example 1
 in_dict: 2
 output: 2
 Example 2
