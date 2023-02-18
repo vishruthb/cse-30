@@ -5,13 +5,14 @@ Most modern web applications expose APIs that clients can use to interact with t
 
 ## Problem Statement:
 Let us assume that you have a web server or application that appends a line to a log file every time it serves a request. Some examples of lines in the log file are as follows (two lines of the log file are shown here (the format of the input log file).
-
+```python
 199.72.81.55 - - [01/Jul/1995:00:00:01 -0400] "GET /history/apollo/ HTTP/1.0" 200 6245 
 unicomp6.unicomp.net - - [01/Jul/1995:00:00:06 -0400] "GET /shuttle/countdown/ HTTP/1.0" 200 3985
+```
 Here is the meaning of the fields of the above log lines. That is what is typically called metadata (or columns here). Note that unknown is the column that you can ignore for this assignment. And note that content_size is an int type, i.e., number of bytes.
-
+```python
 host, unknown1, unknown2, timestamp, method, url, version, response_code, content_size  
-
+```
 ## Prerequisites
 To do the data analysis, the first step is to implement a function that reads in the provided log file and stores the data in a Pandas Dataframe. 
 
@@ -22,9 +23,10 @@ Make sure the names and order of the columns follow the metadata above.
 (Hint) Avoid storing incorrect column names, missing column names, or storing column names in a different order.
 Using the two example log lines given above, it should generate a Pandas Dataframe looks like this:
 host	timestamp	method	url	version	response_code	content_size
+```python
 199.72.81.55	01/Jul/1995:00:00:01 -0400	GET	/history/apollo/	HTTP/1.0	200	6245
 unicomp6.unicomp.net	01/Jul/1995:00:00:06 -0400	GET	/shuttle/countdown/	HTTP/1.0	200	3985
-
+```
 After storing log data in the Dataframe, the data analysis is ready to start.
 
 ## Problem A (8 pts)
@@ -54,7 +56,7 @@ if a number is a float number, you will need to cast it into an integer number
 
 ## Problem B (4 pts)
 Implement a function that can write the answers to Problem A into a JSON file. The format should match the following example:
-
+```python
 {
     "get_num_of_distinct_resp_code": 1,
     "get_median_content_size": 2,
@@ -65,3 +67,4 @@ Implement a function that can write the answers to Problem A into a JSON file. T
     "get_num_of_unique_hosts_daily": [7, 0, 0],
     "get_avg_num_of_req_per_host_daily": [8, 0, 0]
 }
+```
