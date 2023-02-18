@@ -90,15 +90,9 @@ The integer division should truncate toward zero. You may assume that the given 
 Note: You are NOT allowed to use any built-in function, or external library, which evaluates strings as mathematical expressions, such as eval().
 
 ### Constraints:
-⋅⋅* s consists of integers and operators  '+', '-', '*', and  '/'  separated by some number of spaces. No other characters and assume the expression is valid
-⋅⋅* operator precedence: -, +, *, /   (low to high) (note: this is slightly different from math; - and + are NOT in the same level; so do * and /)
-⋅⋅* s represents a valid expression. All the integers in the expression are non-negative integers in the range [0, 2^31 - 1].
-
-Submission Instructions:
-
-A single .py file named “ evaluate_expression.py” containing all of the functions listed above.
-Make sure the return types of all functions follow that of the Problem Statement. Returning the wrong type will make grading difficult
-As mentioned, please make sure to use the exact name of the file, or you will get a 0 on the assignment.
+* s consists of integers and operators  '+', '-', '*', and  '/'  separated by some number of spaces. No other characters and assume the expression is valid
+* operator precedence: -, +, *, /   (low to high) (note: this is slightly different from math; - and + are NOT in the same level; so do * and /)
+* s represents a valid expression. All the integers in the expression are non-negative integers in the range [0, 2^31 - 1].
  
 You may use the starting code below as a starting template for your submission. Please make sure to keep to the naming conventions listed below, even if you do not use the template. Failure to follow naming conventions will fail the autograders and result in a 0 on the assignment. The autograder will also check the stack implementation in your code. 
 
