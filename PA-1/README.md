@@ -10,8 +10,9 @@ def num_of_zeros(grid: list) -> int:
 Examples
 
 Input	
-
+```python
 grid: [[1,1,1,0],[1,1,1,0],[1,1,0,0],[0,0,0,0]]
+```
 
 Output	
 
