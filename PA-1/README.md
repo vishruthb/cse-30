@@ -1,4 +1,4 @@
-# Programming Assignment 1
+# Programming Assignment #1
 
 ## Problem A (6 pts + 1 extra pt)
 
