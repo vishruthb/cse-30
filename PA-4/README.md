@@ -5,38 +5,53 @@
 ### Problem Statement:
 This problem is about single-linked lists. You are given the heads of two sorted linked lists:  linked_list_1 and linked_list_2, containing only integer values and ending with None. Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list. You must solve this problem using recursion.
 
-* Examples
+#### Examples
 
-Example 1:
+* Example 1
+
 linked_list_1: 1 -> 3 -> 5 -> None
 linked_list_2: 2 -> 4 -> 6 -> None
 output: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> None
 
-Example 2
+* Example 2
+
 linked_list_1: None
+
 linked_list_2: None
+
 output: None
 
-Example 3
+* Example 3
+
 linked_list_1: 5 -> None
+
 linked_list_2: 2 -> 4 -> 6 -> None
+
 output: 2 -> 4 -> 5 -> 6 -> None
 
-** EXTERNAL LIBRARIES SHOULD NOT BE USED **
+**EXTERNAL LIBRARIES SHOULD NOT BE USED**
 
+## Problem B - Recursion on Nested Dictionary
 
-## Problem-B - Recursion on Nested Dictionary
+### Problem Statement:
 
-###Problem Statement:
 Write a recursive function that will return the sum of all the integer numbers in a dictionary which may contain more dictionaries nested in it. You must solve this problem using recursion.
 
-* Examples
+#### Examples
 * Example 1
+```python
 in_dict: 2
+```
+```python
 output: 2
-Example 2
+```
+* Example 2
+```python
 in_dict: 'foo'
+```
+```python
 output: 0
+```
 Example 3
  in_dict:
 {
