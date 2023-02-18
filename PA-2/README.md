@@ -22,8 +22,9 @@ Make sure the names and order of the columns follow the metadata above.
 (Hint) Store column names/headers to the Dataframe correctly could make the following tasks easier.
 (Hint) Avoid storing incorrect column names, missing column names, or storing column names in a different order.
 Using the two example log lines given above, it should generate a Pandas Dataframe looks like this:
-host	timestamp	method	url	version	response_code	content_size
+
 ```python
+host	timestamp	method	url	version	response_code	content_size
 199.72.81.55	01/Jul/1995:00:00:01 -0400	GET	/history/apollo/	HTTP/1.0	200	6245
 unicomp6.unicomp.net	01/Jul/1995:00:00:06 -0400	GET	/shuttle/countdown/	HTTP/1.0	200	3985
 ```
@@ -32,23 +33,23 @@ After storing log data in the Dataframe, the data analysis is ready to start.
 ## Problem A (8 pts)
 Write functions that answer the following questions:
 
-1. Total number of distinct HTTP response codes
-2. Median content_size
+Total number of distinct HTTP response codes
+Median content_size
 Hint: use numpy to find median
 Note: need to ignore values in the content_size column that are not a number
 If the median number is a float number, you will need to cast it into an integer number
 We need type-casting, so avoid using round, floor, ceiling, or any other math functions.
-3. Top N (e.g., 10) most frequent hosts
+Top N (e.g., 10) most frequent hosts
 Note: The result should be ordered from top 1 to N
-4. Top N (e.g., 10) most frequent urls
+Top N (e.g., 10) most frequent urls
 Note: The result should be ordered from top 1 to N
-5. Top N (e.g., 5) urls that received error response codes, (i.e., non 200 response codes)
+Top N (e.g., 5) urls that received error response codes, (i.e., non 200 response codes)
 Note: The result should be ordered from top 1 to N
-6. Total number of requests with 404 responses
-7. Number of unique daily (in UTC time) hosts
+Total number of requests with 404 responses
+Number of unique daily (in UTC time) hosts
 Hint: Convert timestamp string into datetime type in UTC timezone
 Note: The result should be ordered from the earliest date to the latest date
-8. Average number of daily (in UTC time) requests per host
+Average number of daily (in UTC time) requests per host
 Hint: Convert timestamp string into datetime type in UTC timezone
 Note: The result should be ordered from the earliest date to the latest date
 if a number is a float number, you will need to cast it into an integer number
