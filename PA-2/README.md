@@ -31,28 +31,28 @@ unicomp6.unicomp.net	01/Jul/1995:00:00:06 -0400	GET	/shuttle/countdown/	HTTP/1.0
 After storing log data in the Dataframe, the data analysis is ready to start.
 
 ## Problem A (8 pts)
+
 Write functions that answer the following questions:
 
-Total number of distinct HTTP response codes
-Median content_size
+1. Total number of distinct HTTP response codes
+2. Median content_size
 Hint: use numpy to find median
 Note: need to ignore values in the content_size column that are not a number
 If the median number is a float number, you will need to cast it into an integer number
 We need type-casting, so avoid using round, floor, ceiling, or any other math functions.
-Top N (e.g., 10) most frequent hosts
+3. Top N (e.g., 10) most frequent hosts
 Note: The result should be ordered from top 1 to N
-Top N (e.g., 10) most frequent urls
+4. Top N (e.g., 10) most frequent urls
 Note: The result should be ordered from top 1 to N
-Top N (e.g., 5) urls that received error response codes, (i.e., non 200 response codes)
+5. Top N (e.g., 5) urls that received error response codes, (i.e., non 200 response codes)
 Note: The result should be ordered from top 1 to N
-Total number of requests with 404 responses
-Number of unique daily (in UTC time) hosts
+6. Total number of requests with 404 responses
+7. Number of unique daily (in UTC time) hosts
 Hint: Convert timestamp string into datetime type in UTC timezone
 Note: The result should be ordered from the earliest date to the latest date
-Average number of daily (in UTC time) requests per host
+8. Average number of daily (in UTC time) requests per host
 Hint: Convert timestamp string into datetime type in UTC timezone
-Note: The result should be ordered from the earliest date to the latest date
-if a number is a float number, you will need to cast it into an integer number
+Note: The result should be ordered from the earliest date to the latest date if a number is a float number, you will need to cast it into an integer number
  
 
 ## Problem B (4 pts)
