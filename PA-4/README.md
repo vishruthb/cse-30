@@ -5,8 +5,8 @@
 ### Problem Statement:
 This problem is about single-linked lists. You are given the heads of two sorted linked lists:  linked_list_1 and linked_list_2, containing only integer values and ending with None. Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list. You must solve this problem using recursion.
 
-#### Examples
-* Example 1
+* Examples
+** Example 1
 linked_list_1: 1 -> 3 -> 5 -> None
 linked_list_2: 2 -> 4 -> 6 -> None
 output: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> None
