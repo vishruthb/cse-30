@@ -101,7 +101,6 @@ def main() -> None:
     # however, please remember to remove them, and re-run this testing script
     # right before you submit your work, in order to ensure your code is
     # free from syntax error
-
     linked_list_1 = ListNode(1, ListNode(3, ListNode(5)))
     linked_list_2 = ListNode(2, ListNode(4, ListNode(6)))
     linked_list_12 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6))))))
@@ -146,7 +145,6 @@ def main() -> None:
     type_match_str = '==' if type_match else '!='
     print('Return Type:        ', 'type(Expected result)', type_match_str, 'type(Your result)')
     print()
-
 
 if __name__ == '__main__':
     main()
