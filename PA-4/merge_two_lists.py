@@ -28,7 +28,7 @@
 #===== Existing classes section begins
 # These class(es) are provided as part of the assignment
 # DO NOT change or add anything in this section
-# keep this section as is
+# keep this section as is 
 class ListNode:
     def __init__(self, val: int, next: 'Union[ListNode, None]'=None) -> None:
         '''
@@ -74,6 +74,18 @@ def merge_two_lists(linked_list_1: 'Union[ListNode, None]', linked_list_2: 'Unio
     '''
     #===== Your implementation begins here
 
+    if linked_list_1 == None and linked_list_2 == None:
+      return None
+    elif linked_list_1 == None and linked_list_2 != None:
+      return linked_list_2
+    elif linked_list_1 != None and linked_list_2 == None:
+      return linked_list_1
+    elif linked_list_1.val < linked_list_2.val:
+      linked_list_1.next = merge_two_lists(linked_list_1.next, linked_list_2)
+      return linked_list_1
+    else:
+      linked_list_2.next = merge_two_lists(linked_list_1, linked_list_2.next)
+      return linked_list_2
     #===== Your implementation ends here
     pass
 
