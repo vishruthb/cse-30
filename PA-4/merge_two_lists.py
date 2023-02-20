@@ -83,14 +83,14 @@ def merge_two_lists(linked_list_1: 'Union[ListNode, None]', linked_list_2: 'Unio
 
     # Recursively compare the first nodes of each linked list, and merge the rest
     if linked_list_1.val < linked_list_2.val:
-        merged_list = ListNode(linked_list_1.val)
-        merged_list.next = merge_two_lists(linked_list_1.next, linked_list_2)
+        mlist = ListNode(linked_list_1.val)
+        mlist.next = merge_two_lists(linked_list_1.next, linked_list_2)
     else:
-        merged_list = ListNode(linked_list_2.val)
-        merged_list.next = merge_two_lists(linked_list_1, linked_list_2.next)
+        mlist = ListNode(linked_list_2.val)
+        mlist.next = merge_two_lists(linked_list_1, linked_list_2.next)
 
-    # Return newly created merged list
-    return merged_list
+    # Return the merged linked list
+    return mlist
     
     #===== Your implementation ends here
     pass
