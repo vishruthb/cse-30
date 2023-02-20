@@ -48,6 +48,30 @@ def nested_dict_sum(in_dict: 'Union[int, str, dict]') -> int:
     '''
     #===== Your implementation begins here
 
+    # If in_dict is an int, then return it
+    if type(in_dict) is int:
+      return in_dict
+    
+    # If in_dict is a str, then return 0
+    elif type(in_dict) is str:
+      return 0
+
+    # If in_dict is a dictionary, then iterate through its items
+    elif type(in_dict) is dict:
+      dsum = 0
+      for i,j in in_dict.items():
+
+          # If the value is a dictionary, then recursively call the function
+          if isinstance(j, dict):
+              dsum += nested_dict_sum(j)
+
+          # If the value is an integer, add its value to the sum
+          elif isinstance(j, int):
+              dsum += j
+
+      # Return the sum of all positive integers in in_dict
+      return dsum
+
     #===== Your implementation ends here
     pass
 
