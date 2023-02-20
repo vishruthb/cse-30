@@ -75,13 +75,13 @@ def merge_two_lists(linked_list_1: 'Union[ListNode, None]', linked_list_2: 'Unio
 
     #===== Your implementation begins here
 
-    # Base cases to account for empty linked lists.
+    # Base cases to account for empty linked lists
     if not linked_list_1:
       return linked_list_2
     if not linked_list_2:
       return linked_list_1
 
-    # Recursively compare the first nodes of each linked list, and merge the rest
+    # Recursively merge two linked lists by comparing node values
     if linked_list_1.val < linked_list_2.val:
         mlist = ListNode(linked_list_1.val)
         mlist.next = merge_two_lists(linked_list_1.next, linked_list_2)
