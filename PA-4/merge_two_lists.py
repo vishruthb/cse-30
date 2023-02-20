@@ -72,20 +72,26 @@ def merge_two_lists(linked_list_1: 'Union[ListNode, None]', linked_list_2: 'Unio
         - ListNode: A sorted linked list merged from linked_list_1 and
                     linked_list_2
     '''
+
     #===== Your implementation begins here
 
-    if linked_list_1 == None and linked_list_2 == None:
-      return None
-    elif linked_list_1 == None and linked_list_2 != None:
+    # Base cases to account for empty linked lists.
+    if not linked_list_1:
       return linked_list_2
-    elif linked_list_1 != None and linked_list_2 == None:
+    if not linked_list_2:
       return linked_list_1
-    elif linked_list_1.val < linked_list_2.val:
-      linked_list_1.next = merge_two_lists(linked_list_1.next, linked_list_2)
-      return linked_list_1
+
+    # Recursively compare the first nodes of each linked list, and merge the rest
+    if linked_list_1.val < linked_list_2.val:
+        merged_list = ListNode(linked_list_1.val)
+        merged_list.next = merge_two_lists(linked_list_1.next, linked_list_2)
     else:
-      linked_list_2.next = merge_two_lists(linked_list_1, linked_list_2.next)
-      return linked_list_2
+        merged_list = ListNode(linked_list_2.val)
+        merged_list.next = merge_two_lists(linked_list_1, linked_list_2.next)
+
+    # Return newly created merged list
+    return merged_list
+    
     #===== Your implementation ends here
     pass
 
@@ -96,6 +102,7 @@ def merge_two_lists(linked_list_1: 'Union[ListNode, None]', linked_list_2: 'Unio
 # follow the instruction below
 # DO NOT add any statement outside of main() function
 def main() -> None:
+
     # you may add your own testing code within this function while you're
     # working on your assignment;
     # however, please remember to remove them, and re-run this testing script
@@ -112,7 +119,7 @@ def main() -> None:
     linked_list_5 = ListNode(5)
     linked_list_6 = ListNode(2, ListNode(4, ListNode(6)))
     linked_list_56 = ListNode(2, ListNode(4, ListNode(5, ListNode(6))))
-
+    
     print('Test case 1')
     linked_list_your_res = merge_two_lists(linked_list_1, linked_list_2)
     print('First linked list:  ', linked_list_1)
