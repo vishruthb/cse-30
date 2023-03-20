@@ -36,21 +36,21 @@ def get_closest_numbers(tree: BinarySearchTree, f: float, p: int) -> 'List[int]'
  #### Examples:
  * Example 1:
  
-inputs: ``` Root node 5, F: 4.82, P = 2 ```
+inputs: ```Root node 5, F: 4.82, P = 2```
 
-output: ``` [5,4] ```
+output: ```[5,4]```
 
 * Example 2:
 
-inputs: ``` Root node 3, F = 1.20, P = 1 ```
+inputs: ```Root node 3, F = 1.20, P = 1```
 
-output: ``` [3] ```
+output: ```[3]```
 
 * Example 3:
 
-inputs: ``` Root node 8, F = 99.90, P = 4 ```
+inputs: ```Root node 8, F = 99.90, P = 4```
 
-output: ``` [8,10,13,14] ```
+output: ```[8,10,13,14]```
 
 #### Notes/Assumptions:
 * There is only one unique set of P values in the BST that are closest to F
@@ -66,15 +66,15 @@ Given a List of English words and an integer K, return the K most frequent words
  #### Examples:
  * Example 1:
  
-input: ``` ['Cat', 'bat', 'and', 'a', 'Rat', 'are', 'singing', 'A', 'bat', 'is', 'not', 'the', 'black', 'caT', 'An', 'elephant', 'a', 'Rat', 'and', 'a', 'cat', 'are', 'walking', 'Bat', 'is', 'black', 'but', 'the', 'cat', 'is', 'white', 'And', 'dog', 'is' 'brown']```
+input: ```['Cat', 'bat', 'and', 'a', 'Rat', 'are', 'singing', 'A', 'bat', 'is', 'not', 'the', 'black', 'caT', 'An', 'elephant', 'a', 'Rat', 'and', 'a', 'cat', 'are', 'walking', 'Bat', 'is', 'black', 'but', 'the', 'cat', 'is', 'white', 'And', 'dog', 'is' 'brown']```
 
-output (when ```k = 2 ```): ``` ['cat', 'bat'] ```
+output (when ```k = 2```): ```['cat', 'bat']```
 
 * Example 2:
 
-input: ``` ['The', 'weather', 'is', 'sunny', 'in', 'SC', 'The', 'weather', 'is', 'cloudy', 'the', 'weather'] ```
+input: ```['The', 'weather', 'is', 'sunny', 'in', 'SC', 'The', 'weather', 'is', 'cloudy', 'the', 'weather']```
 
-output (when ```k = 2 ```): ``` ['weather', 'cloudy'] ```
+output (when ```k = 2```): ```['weather', 'cloudy']```
 
 #### Notes/Assumptions:
 * If two words have the same frequency, the word with the lower alphabetical order comes first
