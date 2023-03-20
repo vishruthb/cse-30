@@ -38,4 +38,21 @@ def get_closest_numbers(tree: BinarySearchTree, f: float, p: int) -> 'List[int]'
  
 Inputs: ``` Root node 5, F: 4.82, P = 2 ```
 
-Output: ``` python [ 5, 4 ] ```
+Output: ``` [5, 4] ```
+
+* Example 2:
+
+Inputs: ``` Root node 3, F = 1.20, P = 1 ```
+
+Output: ``` [3] ```
+
+* Example 3:
+
+Inputs: ``` Root node 8, F = 99.90, P = 4 ```
+
+Output: ``` [8,10,13,14] ```
+
+#### Notes/Assumptions:
+* There is only one unique set of P values in the BST that are closest to F
+* All the elements in the tree are integers
+* **EXTERNAL LIBRARIES SHOULD NOT BE USED**
