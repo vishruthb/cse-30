@@ -36,6 +36,11 @@ def get_closest_numbers(tree: BinarySearchTree, f: float, p: int) -> 'List[int]'
  #### Examples:
  * Example 1:
  
-Inputs: ```python Root node 5, F: 4.82, P = 2 ```
+Inputs: 
+```python 
+Root node 5, F: 4.82, P = 2 
+```
 
-Output: ```python [ 5, 4 ]```
+Output: ```
+python [ 5, 4 ]
+```
