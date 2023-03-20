@@ -1,6 +1,6 @@
 # Programming Assignment #6
 
-## Problem A
+## Problem A: Get the Order of Courses
 
 ### Background:
 In the school curriculum, there is a sequential relationship between courses. One can only take the subsequent courses if have finished the prerequisite courses. In this problem, we constructed a list for the courses and their relationships. Your task is to find out the fastest schedule to complete all given courses and **return the corresponding course schedule (course order)**.
@@ -88,29 +88,112 @@ quarter 3: course LING-777.
   ```
 * You can assume that the course name will always be a valid string.
 
-## Problem B
+## Problem B: Find all Paths between Cities
+
+### Background:
+We represent the connection between cities using a DAG (directed acyclic graph). The vertex on the graph denotes the city, and the edge denotes the path between cities. Your task is to find out all the path combinations to travel from one given city to another. 
 
 ### Problem Statement:
-Given a List of English words and an integer K, return the K most frequent words. Meanwhile, you need to convert all the words to lowercase, and ignore the stop words (Stop words are given in the template code).
+Implement the function called: ```find_paths(connection: List[List[int]], source: int, destination: int) -> List[List[int]]```, to return a list including all paths from the city source to the city destination. You may return them in any order. If the path does not exist, return an empty list. Note that we use the number (```int```) as the name of the city.
+
+##### Function parameters:
+
+* ```connection```: a list with length N, where N is the number of paths involved in this connection map. Each sublist in ```connection```, ```connection[i]=[u,v]```, indicates that there is a path from the city ```u``` to city ```v```.
+* ```source```: an integer that represents the name of the city.
+* ```destination```: an integer that represents the name of the city.
+
+##### Return :
+
+* ```List[List[int]]```:  a List stores all paths from city source to city destination. Each path should be represented as a list of the city name. 
 
  #### Examples:
  * Example 1:
  
-input: ```['Cat', 'bat', 'and', 'a', 'Rat', 'are', 'singing', 'A', 'bat', 'is', 'not', 'the', 'black', 'caT', 'An', 'elephant', 'a', 'Rat', 'and', 'a', 'cat', 'are', 'walking', 'Bat', 'is', 'black', 'but', 'the', 'cat', 'is', 'white', 'And', 'dog', 'is' 'brown']```
+```python
+Input:
+  connection = [[0,1],[0,4],[1,2],[2,3],[3,4]]
+  source = 2
+  destination = 1
+Output:
+  []
 
-output (when ```k = 2```): ```['cat', 'bat']```
+'''
+Explanation:
+  There is no path connection from city 2 to city 1
+  '''
+```
 
 * Example 2:
 
-input: ```['The', 'weather', 'is', 'sunny', 'in', 'SC', 'The', 'weather', 'is', 'cloudy', 'the', 'weather']```
+```python
+Input:
+  connection = [[0,1],[1,2],[1,3],[1,5],[2,3],[2,4],[3,4],[4,5],[0,5]]
+  source = 1
+  destination = 5
+Output:
+   [[1,2,3,4,5], [1,2,4,5], [1,3,4,5], [1,5]]
+   
+'''
+Explanation:
+  three paths: 1 -> 2 -> 3 -> 4 -> 5 and 1 -> 2 -> 4 -> 5 and 1 -> 3 -> 4 -> 5 and 1 -> 5
+  '''
+ ```
 
-output (when ```k = 2```): ```['weather', 'cloudy']```
+#### Constraints/Hints:
+* Input ```source``` and ```destination``` are different numbers, i.e., ```source ≠ destination```
+* Input ```source``` and ```destination``` can always be found in the given connection map
+* All cities (vertices) in the connection map are unique
+* The ```connection``` is a DAG, i.e., **directed and acyclic**.
+* The input connection is not sorted.
 
-#### Notes/Assumptions:
-* If two words have the same frequency, the word with the lower alphabetical order comes first
-* All words in the list are in string type
-* K is always a positive integer
-* K is smaller or equal to the number of unique words given in the input
-* So you don't need to worry about K being larger than the number of items in your result list
-* **ONLY GIVEN EXTERNAL LIBRARIES ARE ALLOWED**
+## Problem C: Largest Score Pattern (Optional)
+
+### Background:
+Given three arrays of the same length: ```username```, ```website```, and ```timestamp```, where each tuple i represents that the user ```username[i]``` visited the website ```website[i]``` at the time ```timestamp[i]```. A pattern is a list of three websites, not necessarily distinct. The score of a pattern is the number of users that consecutive visited all the websites in the pattern in the same order they appeared in the pattern (see more explanation in section:Hints). The task is to find the pattern with the largest score, and if there are multiple patterns with the same score, return the lexicographically smallest pattern.
+
+### Problem Statement:
+The task is to implement a function ```find_largest_pattern(username: List[str], timestamp: List[int], website: List[str]) -> List[str]:``` that takes three arrays of strings ```username```, ```website```, and an array of integers ```timestamp```, and returns a list of three strings, representing the pattern with the largest score.
+
+##### Function parameters: 
+* ```username```: a list of strings representing the usernames of the users who visited the websites.
+* ```timestamp```: a list of integers representing the timestamps at which the users visited the websites.
+* ```website```: a list of strings representing the names of the websites visited by the users.
+
+##### Return :
+* List[str]: a list of three strings representing the website pattern with the largest score.
+
+#### Examples:
+ * Example 1:
+ 
+```python
+Input:
+  username = ["bob","bob","bob","john","john","john","john","mike","mike","mike"],
+  timestamp = [1,2,3,4,5,6,7,8,9,10], 
+  website = ["song","page","faq","song","cart","maps","song","song","page","faq"]
+
+Output:
+  ["song","page","faq"]
+
+'''
+Explanation:
+  The tuples in this example are:
+  ["bob","song",1],["bob","page",2],["bob","faq",3],["john","song",4],
+  ["john","cart",5],["john","maps",6],["john","song",7],["mike","song",8],["mike","page",9], and ["mike","faq",10].
+
+  The pattern ["song", "page", "faq"] has score 2 (bob and mike).
+  The pattern ["song", "cart", "maps"] has score 1 (john).
+  The pattern ["cart", "maps", "song"] has score 1 (john).
+  The pattern ["song", "cart", "song"] has score 0 (john visited "maps" in-between "song" and "cart").
+  The pattern ["song", "maps", "song"] has score 0 (john visited "cart" in-between "song" and "maps").
+  The pattern ["song", "song", "song"] has score 0 (no user visited song 3 times).
+'''
+```
+
+#### Notes/Assumptions/Hints:
+* It is guaranteed that there is at least one valid pattern in the input
+* You can assume that given lists are always sorted by the timestamp 
+* The websites in the pattern must be visited by a user continuously (user-wise) for a score. For example, John visited ["song","cart","maps","song"]; then, we cannot say ["song","maps","song"] is a visited pattern of John, since John also visited "cart" in-between "song" and "maps".
+Continuous visits are defined user-wise. For example, John visited ["song","cart","maps","song"] at timestamp [1,2,3,5], and another user Bob visited ["cart"] at timestamp [4]. This will not break the continuity of pattern ["cart","maps","song"]
+* This problem is not closely related to graph theory. Think of it more in terms of OTHER data structures
+
 
