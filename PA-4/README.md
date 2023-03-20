@@ -1,5 +1,8 @@
 <h1> Programming Assignment #4 </h1> 
-<style> border-bottom: none </style>
+<style> 
+ h1 {
+  border-bottom: none 
+</style>
 
 ## Problem A - Recursion on Single Linked List
 
