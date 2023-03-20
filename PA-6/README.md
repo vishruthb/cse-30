@@ -195,5 +195,3 @@ Explanation:
 * The websites in the pattern must be visited by a user continuously (user-wise) for a score. For example, John visited ["song","cart","maps","song"]; then, we cannot say ["song","maps","song"] is a visited pattern of John, since John also visited "cart" in-between "song" and "maps".
 Continuous visits are defined user-wise. For example, John visited ["song","cart","maps","song"] at timestamp [1,2,3,5], and another user Bob visited ["cart"] at timestamp [4]. This will not break the continuity of pattern ["cart","maps","song"]
 * This problem is not closely related to graph theory. Think of it more in terms of OTHER data structures
-
-
