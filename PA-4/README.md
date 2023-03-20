@@ -1,7 +1,7 @@
 <h1> Programming Assignment #4 </h1> 
 <style> 
  h1 {
-  border-bottom: none
+  border-bottom: none;
  }
 </style>
 
