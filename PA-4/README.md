@@ -1,4 +1,4 @@
-# Programming Assignment #4
+Programming Assignment #4
 
 ## Problem A - Recursion on Single Linked List
 
