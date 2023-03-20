@@ -12,7 +12,7 @@ This problem is about single-linked lists. You are given the heads of two sorted
 linked_list_1: 1 -> 3 -> 5 -> None
 linked_list_2: 2 -> 4 -> 6 -> None
 ```
-```pythoon
+```python
 output: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> None
 ```
 * Example 2
